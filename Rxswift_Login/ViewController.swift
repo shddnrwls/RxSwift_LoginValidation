@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+
 
 class ViewController: UIViewController {
 
@@ -14,16 +17,21 @@ class ViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginBtn: UIButton!
     @IBOutlet var stateLbl: UILabel!
+    
+    
+    var loginViewModel = LoginViewModel()
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        _ = emailTextField.rx.text.map { $0 ?? ""}.bind(to: loginViewModel.emailText)
+        _ = passwordTextField.rx.text.map { $0 ?? ""}.bind(to: loginViewModel.passwordText)
+        _ = loginViewModel.isValid.bind(to: loginBtn.rx.isEnabled)
+        _ = loginViewModel.isValid.subscribe(onNext: { [unowned self] isValid in
+            self.stateLbl.text = isValid ? "Enabled" : "NotEnabled"
+            self.stateLbl.textColor = isValid ? .green : .red
+        }).disposed(by: disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

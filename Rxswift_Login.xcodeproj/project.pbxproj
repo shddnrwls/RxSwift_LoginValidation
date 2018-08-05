@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042A271621173EDB00BBAE31 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A271521173EDB00BBAE31 /* LoginViewModel.swift */; };
 		04B0346821173C3D000F665D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0346721173C3D000F665D /* AppDelegate.swift */; };
 		04B0346A21173C3D000F665D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0346921173C3D000F665D /* ViewController.swift */; };
 		04B0346D21173C3D000F665D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B0346B21173C3D000F665D /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042A271521173EDB00BBAE31 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		04B0346421173C3D000F665D /* Rxswift_Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rxswift_Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B0346721173C3D000F665D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B0346921173C3D000F665D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				04B0346721173C3D000F665D /* AppDelegate.swift */,
 				04B0346921173C3D000F665D /* ViewController.swift */,
 				04B0346B21173C3D000F665D /* Main.storyboard */,
+				042A271521173EDB00BBAE31 /* LoginViewModel.swift */,
 				04B0346E21173C3E000F665D /* Assets.xcassets */,
 				04B0347021173C3E000F665D /* LaunchScreen.storyboard */,
 				04B0347321173C3E000F665D /* Info.plist */,
@@ -204,6 +207,7 @@
 			files = (
 				04B0346A21173C3D000F665D /* ViewController.swift in Sources */,
 				04B0346821173C3D000F665D /* AppDelegate.swift in Sources */,
+				042A271621173EDB00BBAE31 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +355,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPVNKF4986;
 				INFOPLIST_FILE = Rxswift_Login/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swift.Rxswift-Login";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -367,7 +374,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPVNKF4986;
 				INFOPLIST_FILE = Rxswift_Login/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swift.Rxswift-Login";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
